@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        PATH = "/usr/local/bin:/opt/homebrew/bin:${env.PATH}"
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -51,9 +55,6 @@ pipeline {
         }
         failure {
             echo '=== Pipeline failed! ==='
-            mail to: 'neel2jaiswal@gmail.com',
-                 subject: "FAILED: Pipeline ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                 body: "Pipeline failed. Check: ${env.BUILD_URL}"
         }
     }
 }
