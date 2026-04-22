@@ -16,10 +16,10 @@ def test_prediction_approved():
     df = load_data()
     model, _ = train_model(df)
     result = predict(model, age=35, income=60000, loan_amount=20000, credit_score=700, employed=1)
-    assert result in ["Approved", "Denied"]
+    assert result in ["Approved", "Rejected"]
 
 def test_prediction_denied():
     df = load_data()
     model, _ = train_model(df)
     result = predict(model, age=22, income=10000, loan_amount=50000, credit_score=500, employed=0)
-    assert result in ["Approved", "Denied"]
+    assert result in ["Approved", "Rejected"]
