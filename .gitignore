@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+
+# ML artifacts
+model.pkl
+*.tar
+
+# Build output
+build-output/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
