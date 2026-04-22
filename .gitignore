@@ -17,4 +17,4 @@ build-output/
 .vscode/
 
 # Jupyter
-.ipynb_checkpoints/
+.ipynb_checkpoints/loan-approval-app.tar
