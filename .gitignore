@@ -18,3 +18,4 @@ build-output/
 
 # Jupyter
 .ipynb_checkpoints/loan-approval-app.tar
+model.pkl
