@@ -39,4 +39,4 @@ if __name__ == "__main__":
     save_model(model)
     result = predict(model, age=35, income=60000, loan_amount=20000, credit_score=700, employed=1)
     print(f"Sample Prediction (Age:35, Income:60000, Loan:20000, Score:700): {result}")
-    print("Build Success")
+    print("Build Success")this is broken code !!!
