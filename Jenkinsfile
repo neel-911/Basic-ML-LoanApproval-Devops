@@ -29,6 +29,20 @@ pipeline {
                 sh 'python3 -m pytest test_app.py -v'
             }
         }
+
+        stage('Docker Build') {
+            steps {
+                echo '=== Building Docker Image ==='
+                sh 'docker build -t loan-approval-app .'
+            }
+        }
+
+        stage('Docker Run') {
+            steps {
+                echo '=== Running Docker Container ==='
+                sh 'docker run --rm loan-approval-app'
+            }
+        }
     }
 
     post {
